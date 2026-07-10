@@ -16,6 +16,13 @@ body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-se
 .cover .badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
 .cover .badge{font-size:.82rem;color:var(--green-d);background:#eef4ef;border:1px solid #d6e3d9;padding:5px 12px;border-radius:999px;}
 .layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:40px;padding:32px 28px 80px;}
+.sample-download{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;margin:0 0 30px;padding:22px 24px;border:1px solid #d6e3d9;border-radius:8px;background:#f4f7f3;text-align:left;}
+.sample-download h2{margin:0 0 6px;font-family:"Noto Serif SC",serif;font-size:1.12rem;line-height:1.55;color:var(--green-d);}
+.sample-download p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.6;}
+.download-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 18px;border-radius:6px;background:var(--green-d);color:#f7faf8;font-size:.92rem;font-weight:600;line-height:1.4;text-decoration:none;white-space:nowrap;transition:background .2s cubic-bezier(.4,0,.2,1),transform .2s cubic-bezier(.4,0,.2,1);}
+.download-link:hover{background:var(--green);}
+.download-link:active{transform:translateY(1px);}
+.download-link:focus-visible{outline:3px solid rgba(44,110,73,.28);outline-offset:3px;}
 .toc{position:sticky;top:24px;align-self:start;max-height:calc(100vh - 48px);overflow:auto;font-size:.9rem;border-right:1px solid var(--line);padding-right:16px;}
 .toc h4{font-family:"Noto Serif SC",serif;color:var(--green-d);margin:0 0 10px;font-size:.95rem;letter-spacing:.5px;}
 .toc ul{list-style:none;margin:0;padding:0;}
@@ -41,7 +48,7 @@ body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-se
 .fig figcaption{font-size:.85rem;color:var(--muted);margin-top:10px;}
 .back{display:inline-block;margin:40px 0 0;color:var(--green-d);text-decoration:none;border:1px solid #d6e3d9;padding:8px 16px;border-radius:8px;transition:.2s cubic-bezier(.4,0,.2,1);}
 .back:hover{background:var(--green);color:#fff;}
-@media(max-width:880px){.layout{grid-template-columns:1fr;}.toc{display:none;}}
+@media(max-width:880px){.layout{grid-template-columns:1fr;}.toc{display:none;}.sample-download{grid-template-columns:1fr;gap:16px;}.download-link{width:100%;}}
 </style>
 </head>
 <body>
@@ -278,6 +285,14 @@ body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-se
     </ul>
   </nav>
   <main class="content">
+<section class="sample-download" aria-labelledby="sample-thesis-title">
+  <div>
+    <h2 id="sample-thesis-title">样本论文原文</h2>
+    <p>《数字乡村建设背景下雅安市名山区农村集体“三资”管理问题及对策研究》</p>
+    <p>PDF，94 页，约 1.6 MB</p>
+  </div>
+  <a class="download-link" href="sample-thesis.pdf" download="数字乡村建设背景下雅安市名山区农村集体三资管理问题及对策研究.pdf">下载论文 PDF</a>
+</section>
 <figure class="fig">
   <img src="md2_skeleton.png" alt="md2_skeleton.png">
   <figcaption>图 1 · 开篇框架示意</figcaption>
