@@ -6,6 +6,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "index.html"
 CSS = ROOT / "assets" / "course-index.css"
+FIRST_PRINCIPLES_PAGE = ROOT / "第一性原理" / "index.html"
 
 
 class IndexParser(HTMLParser):
@@ -100,6 +101,27 @@ class CourseIndexTests(unittest.TestCase):
             "--accent: #245642",
         ):
             self.assertIn(contract, css)
+
+
+class FirstPrinciplesNavigationTests(unittest.TestCase):
+    def test_page_links_back_to_the_course_index(self):
+        html = FIRST_PRINCIPLES_PAGE.read_text(encoding="utf-8")
+        parser = IndexParser()
+        parser.feed(html)
+        matches = [
+            attrs
+            for tag, attrs in parser.tags
+            if tag == "a" and "course-back-link" in class_tokens(attrs)
+        ]
+        self.assertEqual(len(matches), 1)
+        self.assertEqual(matches[0].get("href"), "../index.html")
+        self.assertIn("返回硕士课程", html)
+        for contract in (
+            ".course-back-link:focus-visible",
+            "@media screen and (max-width: 500px)",
+            "@media (prefers-reduced-motion: reduce)",
+        ):
+            self.assertIn(contract, html)
 
 
 if __name__ == "__main__":
