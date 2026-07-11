@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>硕士论文写作方法讲座</title>
+<title>硕士论文框架讲座</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -46,20 +46,53 @@ body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-se
 .fig{margin:30px 0;text-align:center;}
 .fig img{width:100%;max-width:520px;border-radius:12px;box-shadow:0 8px 28px rgba(31,42,36,.14);}
 .fig figcaption{font-size:.85rem;color:var(--muted);margin-top:10px;}
+.toc>ul:not(.mainline-toc){display:none;}
+.toc .mainline-toc{display:grid;gap:7px;}
+.toc .mainline-toc li{margin:0;}
+.toc .mainline-toc a{display:block;padding:6px 8px;border-left:2px solid transparent;line-height:1.45;}
+.toc .mainline-toc a:hover,.toc .mainline-toc a:focus-visible{border-left-color:var(--green);background:#eef4ef;outline:none;}
+.reading-guide{margin:0 0 34px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.reading-guide h2{margin:0 0 6px;font-family:"Noto Serif SC",serif;font-size:1.3rem;color:var(--green-d);}
+.reading-guide>p{margin:0 0 18px;color:var(--muted);font-size:.94rem;}
+.reading-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:0;padding:0;list-style:none;counter-reset:path;}
+.reading-steps li{counter-increment:path;position:relative;padding:12px 18px 12px 46px;border-top:1px solid var(--line);}
+.reading-steps li::before{content:counter(path);position:absolute;left:8px;top:13px;width:26px;height:26px;border:1px solid #b9d0bf;border-radius:50%;display:grid;place-items:center;color:var(--green-d);font-size:.82rem;font-weight:700;}
+.reading-steps a{color:var(--green-d);font-weight:700;text-decoration:none;}
+.reading-steps span{display:block;margin-top:3px;color:var(--muted);font-size:.84rem;line-height:1.55;}
+.detail-control{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0 6px;padding:12px 0;border-bottom:1px solid var(--line);}
+.detail-control p{margin:0;color:var(--muted);font-size:.88rem;}
+.detail-toggle{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;color:var(--green-d);font-size:.88rem;font-weight:600;cursor:pointer;}
+.detail-toggle input{width:18px;height:18px;accent-color:var(--green-d);}
+.detail-block{margin:10px 0;border-left:2px solid #d6e3d9;padding-left:14px;}
+.detail-block summary{cursor:pointer;color:#33403a;font-weight:650;padding:7px 0;}
+.detail-block summary:hover{color:var(--green);}
+.detail-block summary:focus-visible{outline:3px solid rgba(44,110,73,.24);outline-offset:3px;}
+.detail-block[open]{margin-bottom:18px;}
+.detail-block[open] summary{color:var(--green-d);}
 .back{display:inline-block;margin:40px 0 0;color:var(--green-d);text-decoration:none;border:1px solid #d6e3d9;padding:8px 16px;border-radius:8px;transition:.2s cubic-bezier(.4,0,.2,1);}
 .back:hover{background:var(--green);color:#fff;}
-@media(max-width:880px){.layout{grid-template-columns:1fr;}.toc{display:none;}.sample-download{grid-template-columns:1fr;gap:16px;}.download-link{width:100%;}}
+@media(max-width:880px){.layout{grid-template-columns:1fr;}.toc{display:none;}.sample-download{grid-template-columns:1fr;gap:16px;}.download-link{width:100%;}.reading-steps{grid-template-columns:1fr;}.detail-control{align-items:flex-start;flex-direction:column;}}
+@media(prefers-reduced-motion:reduce){.download-link,.toc a,.back{transition:none;}}
 </style>
 </head>
 <body>
 <header class="cover">
-  <h1>硕士论文写作方法讲座</h1>
-  <p class="sub">以「农村『三资』管理数字化」硕士论文为样本的逐章写作方法</p>
-  <div class="badges"><span class="badge">论文写作</span><span class="badge">章节结构</span><span class="badge">三资管理</span><span class="badge">研究设计</span><span class="badge">样本拆解</span></div>
+  <h1>硕士论文写作主线</h1>
+  <p class="sub">从选题定界到证据闭环的完整写作路径</p>
+  <div class="badges"><span class="badge">选题定界</span><span class="badge">论证闭环</span><span class="badge">研究设计</span><span class="badge">定稿检查</span></div>
 </header>
 <div class="layout">
   <nav class="toc">
-    <h4>目录</h4>
+    <h4>主线目录</h4>
+    <ul class="mainline-toc">
+      <li><a href="#一论文整体框架与结构">整体框架</a></li>
+      <li><a href="#二各章节写作重点与常见问">章节写作</a></li>
+      <li><a href="#三核心逻辑与论证思路构建">论证主线</a></li>
+      <li><a href="#四选题确定与研究方向深化">选题深化</a></li>
+      <li><a href="#五其他关键注意事项">研究规范</a></li>
+      <li><a href="#六学生定稿前总检查清单">定稿检查</a></li>
+      <li><a href="#七最核心的写作原则">核心原则</a></li>
+    </ul>
     <ul>
 <li><a href="#基于数字乡村建设背景下雅">基于《数字乡村建设背景下雅安市名山区农村集体“三资”管理问题及对策研究》的样本分析</a></li>
 <li><a href="#1硕士论文的基本组成">1. 硕士论文的基本组成</a></li>
@@ -292,6 +325,17 @@ body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-se
     <p>PDF，94 页，约 1.6 MB</p>
   </div>
   <a class="download-link" href="sample-thesis.pdf" download="数字乡村建设背景下雅安市名山区农村集体三资管理问题及对策研究.pdf">下载论文 PDF</a>
+</section>
+<section class="reading-guide" aria-labelledby="reading-guide-title">
+  <h2 id="reading-guide-title">先抓住四步主线</h2>
+  <p>正文保留完整细节，但建议先沿以下路径阅读，再按需要展开具体写作规范。</p>
+  <ol class="reading-steps">
+    <li><a href="#四选题确定与研究方向深化">选题定界</a><span>从宽泛主题收束到可进入、可取证、可回答的问题。</span></li>
+    <li><a href="#一论文整体框架与结构">搭建框架</a><span>让章节围绕同一研究问题分工，而不是材料并列。</span></li>
+    <li><a href="#三核心逻辑与论证思路构建">组织证据</a><span>用理论、方法和多来源材料支撑解释与建议。</span></li>
+    <li><a href="#六学生定稿前总检查清单">闭环定稿</a><span>核对题目、问题、证据、结论及全文一致性。</span></li>
+  </ol>
+  <div class="detail-control"><p>三级内容默认折叠，适合先读主线；需要查阅细节时可逐项展开。</p><label class="detail-toggle" for="detail-toggle"><input id="detail-toggle" type="checkbox">展开全部细节</label></div>
 </section>
 <figure class="fig">
   <img src="md2_skeleton.png" alt="md2_skeleton.png">
@@ -1783,5 +1827,19 @@ body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-se
 <a class="back" href="../index.html">← 返回 硕士课程</a>
   </main>
 </div>
+<script>
+document.querySelectorAll('.content h3').forEach((heading)=>{
+  const details=document.createElement('details');
+  details.className='detail-block';
+  const summary=document.createElement('summary');
+  summary.id=heading.id;
+  summary.innerHTML=heading.innerHTML;
+  heading.replaceWith(details);
+  details.append(summary);
+  while(details.nextSibling&&!details.nextSibling.matches?.('h1,h2,h3,hr')) details.append(details.nextSibling);
+});
+const detailToggle=document.getElementById('detail-toggle');
+detailToggle?.addEventListener('change',()=>document.querySelectorAll('.detail-block').forEach((block)=>{block.open=detailToggle.checked;}));
+</script>
 </body>
 </html>
