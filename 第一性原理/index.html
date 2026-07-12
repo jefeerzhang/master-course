@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <script src="../assets/theme.js"></script>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
 <style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
@@ -2505,7 +2506,12 @@ body .md-table-resize-popover input:focus {
 .course-back-link:focus-visible { outline: 3px solid color-mix(in srgb, var(--element-color), transparent 55%); outline-offset: 3px; }
 @media screen and (max-width: 500px) { .course-back-nav { width: calc(100% - 40px); } .course-back-link { width: 100%; } }
 @media (prefers-reduced-motion: reduce) { .course-back-link { transition: none; } }
-</style>
+
+/* ===== Dark mode (data-theme="dark") ===== */
+:root[data-theme="dark"] { --bg-color:#14191c; --text-color:#e8ebe8; --select-text-bg-color:#245642; }
+[data-theme="dark"] html { background-color:var(--bg-color); color:var(--text-color); }
+[data-theme="dark"] body { background-color:var(--bg-color); color:var(--text-color); }
+  </style>
 
 <title>第一性原理教学讲稿</title>
 </head>

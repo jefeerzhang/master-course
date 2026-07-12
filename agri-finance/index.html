@@ -41,6 +41,16 @@
     .case { background:#fff; border:1px solid var(--hair); padding:18px 22px; margin:24px 0; }
     .case-name { font-weight:600; color:var(--accent); font-size:14px; letter-spacing:0.04em; }
     @media (max-width:720px) { .zigzag { grid-template-columns:1fr; } h1 { font-size:28px; } }
+  
+/* ===== Dark mode (data-theme="dark") ===== */
+:root[data-theme="dark"] { --ink:#e8ebe8; --paper:#14191c; --accent:#5b8df0; --muted:#7c8b83; --hair:#2c343a; }
+[data-theme="dark"] body { background:var(--paper); color:var(--ink); }
+[data-theme="dark"] .toc { background:var(--surface-deep,#1c2429); border-color:var(--hair); }
+[data-theme="dark"] .toc a { color:var(--ink,#a8b3ac); }
+[data-theme="dark"] .toc a:hover { color:var(--accent); }
+[data-theme="dark"] .case { background:var(--surface,#1a2024); border-color:var(--hair); }
+[data-theme="dark"] .cover h1, [data-theme="dark"] .toc h4 { color:var(--accent); }
+[data-theme="dark"] .badge { color:var(--accent); background:rgba(91,141,240,0.15); border-color:var(--hair); }
   </style>
 </head>
 <body>

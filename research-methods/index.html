@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  <script src="../assets/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>农村发展硕士论文核心研究方法指南</title>
@@ -42,7 +43,28 @@ body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans SC",sans-se
 .back{display:inline-block;margin:40px 0 0;color:var(--green-d);text-decoration:none;border:1px solid #d6e3d9;padding:8px 16px;border-radius:8px;transition:.2s cubic-bezier(.4,0,.2,1);}
 .back:hover{background:var(--green);color:#fff;}
 @media(max-width:880px){.layout{grid-template-columns:1fr;}.toc{display:none;}}
-</style>
+
+/* ===== Dark mode (data-theme="dark") ===== */
+:root[data-theme="dark"] { --ink:#e8ebe8; --green:#7fb098; --green-d:#a4cdba; --paper:#14191c; --line:#2c343a; --muted:#7c8b83; }
+[data-theme="dark"] body { background:var(--paper); color:var(--ink); }
+[data-theme="dark"] .cover { border-bottom-color:var(--line); }
+[data-theme="dark"] .cover h1 { color:var(--green-d); }
+[data-theme="dark"] .cover .sub { color:var(--muted); }
+[data-theme="dark"] .cover .badge { color:var(--green-d); background:rgba(127,176,152,0.12); border-color:var(--line); }
+[data-theme="dark"] .layout { color:var(--ink); }
+[data-theme="dark"] .toc { border-right-color:var(--line); }
+[data-theme="dark"] .toc h4 { color:var(--green-d); }
+[data-theme="dark"] .toc li li { color:var(--muted); }
+[data-theme="dark"] .toc a { color:var(--ink); }
+[data-theme="dark"] .toc a:hover { color:var(--green); }
+[data-theme="dark"] .content h1, [data-theme="dark"] .content h2, [data-theme="dark"] .content h3, [data-theme="dark"] .content h4 { color:var(--ink); }
+[data-theme="dark"] .content table { border-color:var(--line); }
+[data-theme="dark"] .content th { background:rgba(127,176,152,0.10); color:var(--ink); border-color:var(--line); }
+[data-theme="dark"] .content td { border-color:var(--line); }
+[data-theme="dark"] .content blockquote { color:var(--muted); border-left-color:var(--green); background:rgba(127,176,152,0.08); }
+[data-theme="dark"] .content pre, [data-theme="dark"] .content code { background:rgba(127,176,152,0.08); color:var(--ink); }
+[data-theme="dark"] hr { border-top-color:var(--line); }
+  </style>
 </head>
 <body>
 <header class="cover">
