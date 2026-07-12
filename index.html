@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jefeerzhang.github.io/master-course/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23245642'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='serif' font-size='27' font-weight='700' fill='%23f6fbf8'%3EJZ%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/course-index.css">
+  <link rel="stylesheet" href="assets/course-index.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳至主要内容</a>
@@ -32,38 +32,130 @@
   </header>
 
   <main id="main-content">
-    <section class="container course-hero" aria-labelledby="course-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Teaching / Methods / Writing</p>
-        <h1 id="course-title">硕士课程</h1>
-        <p class="hero-summary">面向农村发展与经济管理硕士生的课程讲义、研究方法和论文写作资料。</p>
-      </div>
 
-      <aside class="course-index" aria-labelledby="course-focus-title">
-        <h2 id="course-focus-title">课程重点</h2>
-        <ol>
-          <li>研究问题与思维训练</li>
-          <li>研究方法与证据设计</li>
-          <li>论文结构与写作规范</li>
-        </ol>
-      </aside>
+    <!-- =============== HERO =============== -->
+    <section class="course-hero" aria-labelledby="course-title">
+      <div class="container course-hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Teaching · Methods · Writing</p>
+          <h1 id="course-title">硕士课程</h1>
+          <p class="hero-summary">面向农村发展与经济管理硕士生的课程讲义、研究方法和论文写作资料。<br>围绕<span class="hi">研究问题</span>、<span class="hi">方法选择</span>、<span class="hi">结构写作</span>三件事，把方法、案例和判断沉淀成可复用的学习路径。</p>
+
+          <dl class="hero-metrics" aria-label="课程概览">
+            <div class="metric">
+              <dt>讲义</dt>
+              <dd><span class="num">4</span><span class="unit">专题</span></dd>
+            </div>
+            <div class="metric">
+              <dt>课时</dt>
+              <dd><span class="num">28</span><span class="unit">节</span></dd>
+            </div>
+            <div class="metric">
+              <dt>论文样本</dt>
+              <dd><span class="num">94</span><span class="unit">页</span></dd>
+            </div>
+            <div class="metric">
+              <dt>配套</dt>
+              <dd><span class="num">50+</span><span class="unit">图表</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="course-focus" aria-labelledby="course-focus-title">
+          <p class="focus-eyebrow">课程重点 · Focus</p>
+          <h2 id="course-focus-title">四件贯穿始终的事</h2>
+          <ol>
+            <li>
+              <span class="focus-num">01</span>
+              <span class="focus-body">
+                <span class="focus-title">研究问题与思维训练</span>
+                <span class="focus-desc">从真问题出发，建立分析与判断的起点。</span>
+              </span>
+            </li>
+            <li>
+              <span class="focus-num">02</span>
+              <span class="focus-body">
+                <span class="focus-title">研究方法与证据设计</span>
+                <span class="focus-desc">根据问题选方法，让证据可被检验。</span>
+              </span>
+            </li>
+            <li>
+              <span class="focus-num">03</span>
+              <span class="focus-body">
+                <span class="focus-title">论文结构与写作规范</span>
+                <span class="focus-desc">用结构承载论点，让结论站得住。</span>
+              </span>
+            </li>
+            <li>
+              <span class="focus-num">04</span>
+              <span class="focus-body">
+                <span class="focus-title">第一性原理与跨界迁移</span>
+                <span class="focus-desc">从概念分解到研究迁移，训练独立判断。</span>
+              </span>
+            </li>
+          </ol>
+        </aside>
+      </div>
     </section>
 
+    <!-- =============== 学习路径 =============== -->
+    <section class="path-section" aria-labelledby="path-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-eyebrow">Path · 学习路径</p>
+          <h2 id="path-title">一门课程，三段式路径</h2>
+          <p class="section-lede">从选题到答辩，按四步推进：先定问题，再选方法，再做证据，最后成稿。</p>
+        </div>
+
+        <ol class="path-track" aria-label="学习路径">
+          <li class="path-step">
+            <span class="path-num">01</span>
+            <h3>定问题</h3>
+            <p>从经验事实出发，把模糊感觉收敛为一个可问的、可用证据回答的问题。</p>
+          </li>
+          <li class="path-step">
+            <span class="path-num">02</span>
+            <h3>选方法</h3>
+            <p>按问题类型、数据条件、能力边界选方法，让方法服务于问题。</p>
+          </li>
+          <li class="path-step">
+            <span class="path-num">03</span>
+            <h3>做证据</h3>
+            <p>用一手或二手数据形成证据链，把方法跑通，把材料整理干净。</p>
+          </li>
+          <li class="path-step">
+            <span class="path-num">04</span>
+            <h3>成文稿</h3>
+            <p>用结构承载论点，写作规范不是装饰，而是让审稿人能读完你的论证。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =============== 课程资料 =============== -->
     <section class="course-section" aria-labelledby="materials-title">
       <div class="container">
         <div class="section-heading">
-          <h2 id="materials-title">课程资料</h2>
-          <p>选择主题进入完整讲义、方法指南和配套学习材料。</p>
+          <p class="section-eyebrow">Materials · 课程资料</p>
+          <h2 id="materials-title">四个专题讲义</h2>
+          <p class="section-lede">选一个专题进入完整讲义、方法指南和配套学习材料。每个专题自成体系，互相引用。</p>
         </div>
 
         <div class="course-grid">
-          <article class="course-card course-writing">
+          <!-- 主推卡: 硕士论文框架讲座 -->
+          <article class="course-card course-card--lead">
             <a class="course-link" href="yuan-yunfen-writing/">
               <div class="course-copy">
+                <div class="course-tag">
+                  <span class="tag-dot"></span>
+                  <span>主推 · 论文写作起点</span>
+                </div>
                 <h3>硕士论文框架讲座</h3>
-                <p>以农村“三资”管理数字化论文为样本，拆解选题、文献综述、研究设计、章节结构与答辩准备。</p>
+                <p>以农村"三资"管理数字化论文为样本，拆解选题、文献综述、研究设计、章节结构与答辩准备。配套 94 页论文样本下载。</p>
                 <div class="course-meta">
-                  <span>含 94 页论文样本下载</span>
+                  <span class="meta-pill">94 页样本</span>
+                  <span class="meta-pill">5 章拆解</span>
+                  <span class="meta-pill">答辩指南</span>
                   <span class="course-arrow" aria-hidden="true">→</span>
                 </div>
               </div>
@@ -73,13 +165,15 @@
             </a>
           </article>
 
-          <article class="course-card course-methods">
+          <!-- 次卡 1: 研究方法 -->
+          <article class="course-card">
             <a class="course-link" href="research-methods/">
               <div class="course-copy">
-                <h3>农村发展硕士论文核心研究方法指南</h3>
-                <p>根据研究问题、数据条件与能力边界选择扎根理论、fsQCA、问卷、案例和面板数据方法。</p>
+                <p class="course-eyebrow">方法 · Methods</p>
+                <h3>核心研究方法指南</h3>
+                <p>根据研究问题、数据条件与能力边界，在扎根理论、fsQCA、问卷、案例和面板数据方法之间做选择与组合。</p>
                 <div class="course-meta">
-                  <span>方法选择与组合</span>
+                  <span>方法选择路径图</span>
                   <span class="course-arrow" aria-hidden="true">→</span>
                 </div>
               </div>
@@ -89,13 +183,15 @@
             </a>
           </article>
 
-          <article class="course-card course-principles">
+          <!-- 次卡 2: 第一性原理 -->
+          <article class="course-card">
             <a class="course-link" href="第一性原理/">
               <div class="course-copy">
+                <p class="course-eyebrow">思维 · Thinking</p>
                 <h3>第一性原理思维</h3>
                 <p>从概念辨析和经典案例出发，训练分解、验证与重建，并迁移到农村发展研究和论文论证。</p>
                 <div class="course-meta">
-                  <span>思维训练与研究应用</span>
+                  <span>10 张认知锚点</span>
                   <span class="course-arrow" aria-hidden="true">→</span>
                 </div>
               </div>
@@ -105,13 +201,15 @@
             </a>
           </article>
 
-          <article class="course-card course-agri-finance">
+          <!-- 次卡 3: 农业信贷 -->
+          <article class="course-card">
             <a class="course-link" href="agri-finance/">
               <div class="course-copy">
+                <p class="course-eyebrow">专题 · Topic</p>
                 <h3>农业信贷的硬科技</h3>
                 <p>把卫星、物联、区块链和数据闭环串成一套可验证的信贷方法，覆盖五道检验到数字画像。</p>
                 <div class="course-meta">
-                  <span>六张认知锚点 · 专题首发</span>
+                  <span>6 张认知锚点</span>
                   <span class="course-arrow" aria-hidden="true">→</span>
                 </div>
               </div>
@@ -123,6 +221,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
