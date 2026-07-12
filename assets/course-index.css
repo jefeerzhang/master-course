@@ -197,53 +197,6 @@ p {
   padding: 0 2px;
 }
 
-/* hero 4 个 metric */
-.hero-metrics {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  margin: 38px 0 0;
-  padding: 18px 0 0;
-  border-top: 1px solid var(--line-strong);
-  list-style: none;
-}
-.hero-metrics .metric {
-  padding: 0 18px 0 0;
-  border-right: 1px solid var(--line);
-}
-.hero-metrics .metric:last-child { border-right: 0; padding-right: 0; }
-.hero-metrics .metric:first-child { padding-left: 0; }
-.hero-metrics dt {
-  margin: 0 0 4px;
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.hero-metrics dd {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--serif);
-  line-height: 1;
-}
-.hero-metrics .num {
-  font-size: clamp(28px, 3.2vw, 40px);
-  font-weight: 800;
-  color: var(--accent);
-  letter-spacing: -0.02em;
-  font-feature-settings: "tnum" 1, "lnum" 1;
-}
-.hero-metrics .unit {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text);
-}
-
 /* hero 右侧课程重点 */
 .course-focus {
   padding: 20px 0 0;
@@ -644,10 +597,6 @@ p {
 /* ============== 响应式 ============== */
 @media (max-width: 960px) {
   .course-hero-inner { grid-template-columns: 1fr; }
-  .hero-metrics { grid-template-columns: repeat(2, 1fr); gap: 0; }
-  .hero-metrics .metric { padding: 12px 16px 12px 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .hero-metrics .metric:nth-child(2n) { border-right: 0; padding-right: 0; }
-  .hero-metrics .metric:nth-last-child(-n+2) { border-bottom: 0; }
   .path-track { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
   .path-track::before { display: none; }
   .course-card:not(.course-card--lead) { grid-column: span 6; }
