@@ -567,3 +567,44 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; } }
+
+/* ============================================================
+   Dark mode (data-theme="dark")
+   - 翻转 paper / surface / ink / muted / line
+   - accent 保持墨绿但提亮一档, 保证暗底对比度
+   ============================================================ */
+:root[data-theme="dark"] {
+  --paper: #14191c;
+  --surface: #1a2024;
+  --surface-soft: #20282d;
+  --surface-deep: #2a3239;
+  --ink: #e8ebe8;
+  --text: #a8b3ac;
+  --muted: #7c8b83;
+  --line: #2c343a;
+  --line-strong: #4a5660;
+  --accent: #7fb098;
+  --accent-hover: #9ec5b3;
+  --accent-ink: #0f1714;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+:root[data-theme="dark"] body { background: var(--paper); color: var(--ink); }
+:root[data-theme="dark"] .site-nav { background: rgba(20, 25, 28, 0.86); border-bottom-color: var(--line); }
+:root[data-theme="dark"] .site-footer { background: var(--surface); border-top-color: var(--line); color: var(--muted); }
+:root[data-theme="dark"] .footer-counter { color: var(--muted); }
+
+/* 主题切换按钮 */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; margin-left: 14px; padding: 0; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--text); cursor: pointer; transition: background 180ms var(--ease), border-color 180ms var(--ease), color 180ms var(--ease); }
+.theme-toggle:hover { background: var(--surface-soft); border-color: var(--line-strong); color: var(--accent); }
+.theme-toggle svg { width: 16px; height: 16px; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: inline-block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: none; }
+:root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: inline-block; }
+
+/* 浮窗 FAB */
+.theme-toggle--fab { position: fixed; right: 18px; bottom: 18px; width: 44px; height: 44px; margin: 0; background: var(--surface); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); z-index: 1000; }
+:root[data-theme="dark"] .theme-toggle--fab { background: var(--surface-deep); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); }
+.theme-toggle--fab svg { width: 18px; height: 18px; }

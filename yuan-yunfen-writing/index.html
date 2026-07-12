@@ -1841,5 +1841,8 @@ document.querySelectorAll('.content h3').forEach((heading)=>{
 const detailToggle=document.getElementById('detail-toggle');
 detailToggle?.addEventListener('change',()=>document.querySelectorAll('.detail-block').forEach((block)=>{block.open=detailToggle.checked;}));
 </script>
+<script>
+(function(){var b=document.getElementById("theme-toggle");if(b&&window.Theme){b.addEventListener("click",function(){window.Theme.toggle();});}})
+</script>
 </body>
 </html>
