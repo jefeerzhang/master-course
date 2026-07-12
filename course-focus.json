@@ -1,9 +1,9 @@
 {
   "$schema": "https://jefeerzhang.github.io/master-course/schemas/course-focus.v1.json",
-  "version": "1.1",
+  "version": "1.2",
   "lastUpdated": "2026-07-12",
   "generatedBy": "手工编辑（待 agent 自动化派生）",
-  "changeLog": "v1.1: 删除学习路径 section, 主页简化至 4 段: HERO + 课程重点 + 课程资料 + footer",
+  "changeLog": "v1.1: 删除学习路径 section; v1.2: 4 张卡副文压缩为一行句式",
   "sourceHint": "每次推送子站内容后, agent 读取各子站首页的 <h1>/<h2>/<p> + 此 JSON 默认模板, 重新聚合派生本页 'course-focus' 区。详见 MAINTENANCE.md。",
   "items": [
     {
@@ -40,7 +40,7 @@
       "id": "lead-thesis-framework",
       "title": "硕士论文框架讲座",
       "eyebrow": "主推 · 论文写作起点",
-      "summary": "以农村"三资"管理数字化论文为样本，拆解选题、文献综述、研究设计、章节结构与答辩准备。",
+      "summary": "用一篇 94 页论文样本拆解选题、结构与答辩。",
       "pills": ["94 页样本", "5 章拆解", "答辩指南"],
       "href": "yuan-yunfen-writing/",
       "image": "yuan-yunfen-writing/md2_skeleton.png"
@@ -49,7 +49,7 @@
       "id": "research-methods",
       "title": "核心研究方法指南",
       "eyebrow": "方法 · Methods",
-      "summary": "根据研究问题、数据条件与能力边界，在扎根理论、fsQCA、问卷、案例和面板数据方法之间做选择与组合。",
+      "summary": "按问题与数据条件选方法，让证据可被检验。",
       "pills": ["方法选择路径图"],
       "href": "research-methods/",
       "image": "research-methods/md1_path.png"
@@ -58,7 +58,7 @@
       "id": "first-principles",
       "title": "第一性原理思维",
       "eyebrow": "思维 · Thinking",
-      "summary": "从概念辨析和经典案例出发，训练分解、验证与重建，并迁移到农村发展研究和论文论证。",
+      "summary": "从概念分解到研究迁移，训练独立判断。",
       "pills": ["10 张认知锚点"],
       "href": "第一性原理/",
       "image": "第一性原理/第一性原理配图/01_概念三层分解.jpeg"
@@ -67,7 +67,7 @@
       "id": "agri-finance",
       "title": "农业信贷的硬科技",
       "eyebrow": "专题 · Topic",
-      "summary": "把卫星、物联、区块链和数据闭环串成一套可验证的信贷方法，覆盖五道检验到数字画像。",
+      "summary": "把卫星、物联、区块链串成可验证的信贷闭环。",
       "pills": ["6 张认知锚点"],
       "href": "agri-finance/",
       "image": "第一性原理/第一性原理配图/05_卫星俯瞰农田.jpeg"

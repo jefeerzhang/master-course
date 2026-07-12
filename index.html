@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jefeerzhang.github.io/master-course/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23245642'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='serif' font-size='27' font-weight='700' fill='%23f6fbf8'%3EJZ%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/course-index.css?v=7">
+  <link rel="stylesheet" href="assets/course-index.css?v=8">
   <!--
     主页两个核心区是"派生视图"，数据源在 course-focus.json。
     此处把 JSON 嵌入 HTML 是为了让静态部署下浏览器无需额外 HTTP 也能拿到派生数据。
@@ -19,9 +19,9 @@
   -->
   <script id="course-focus-data" type="application/json">
 {
-  "version": "1.1",
+  "version": "1.2",
   "lastUpdated": "2026-07-12",
-  "changeLog": "v1.1: 删除学习路径 section",
+  "changeLog": "v1.1: 删除学习路径; v1.2: 4 张卡副文一行句式",
   "items": [
     { "id": "01", "title": "研究问题与思维训练",   "desc": "从真问题出发，建立分析与判断的起点。" },
     { "id": "02", "title": "研究方法与证据设计",   "desc": "根据问题选方法，让证据可被检验。" },
@@ -33,7 +33,7 @@
       "id": "lead",
       "eyebrow": "主推 · 论文写作起点",
       "title": "硕士论文框架讲座",
-      "summary": "以农村\"三资\"管理数字化论文为样本，拆解选题、文献综述、研究设计、章节结构与答辩准备。配套 94 页论文样本下载。",
+      "summary": "用一篇 94 页论文样本拆解选题、结构与答辩。",
       "pills": ["94 页样本", "5 章拆解", "答辩指南"],
       "href": "yuan-yunfen-writing/",
       "image": "yuan-yunfen-writing/md2_skeleton.png"
@@ -42,7 +42,7 @@
       "id": "methods",
       "eyebrow": "方法 · Methods",
       "title": "核心研究方法指南",
-      "summary": "根据研究问题、数据条件与能力边界，在扎根理论、fsQCA、问卷、案例和面板数据方法之间做选择与组合。",
+      "summary": "按问题与数据条件选方法，让证据可被检验。",
       "pills": ["方法选择路径图"],
       "href": "research-methods/",
       "image": "research-methods/md1_path.png"
@@ -51,7 +51,7 @@
       "id": "thinking",
       "eyebrow": "思维 · Thinking",
       "title": "第一性原理思维",
-      "summary": "从概念辨析和经典案例出发，训练分解、验证与重建，并迁移到农村发展研究和论文论证。",
+      "summary": "从概念分解到研究迁移，训练独立判断。",
       "pills": ["10 张认知锚点"],
       "href": "第一性原理/",
       "image": "第一性原理/第一性原理配图/01_概念三层分解.jpeg"
@@ -60,7 +60,7 @@
       "id": "agri",
       "eyebrow": "专题 · Topic",
       "title": "农业信贷的硬科技",
-      "summary": "把卫星、物联、区块链和数据闭环串成一套可验证的信贷方法，覆盖五道检验到数字画像。",
+      "summary": "把卫星、物联、区块链串成可验证的信贷闭环。",
       "pills": ["6 张认知锚点"],
       "href": "agri-finance/",
       "image": "第一性原理/第一性原理配图/05_卫星俯瞰农田.jpeg"
@@ -154,7 +154,7 @@
                   <span>主推 · 论文写作起点</span>
                 </div>
                 <h3>硕士论文框架讲座</h3>
-                <p>以农村"三资"管理数字化论文为样本，拆解选题、文献综述、研究设计、章节结构与答辩准备。配套 94 页论文样本下载。</p>
+                <p>用一篇 94 页论文样本拆解选题、结构与答辩。</p>
                 <div class="course-meta">
                   <span class="meta-pill">94 页样本</span>
                   <span class="meta-pill">5 章拆解</span>
@@ -174,7 +174,7 @@
               <div class="course-copy">
                 <p class="course-eyebrow">方法 · Methods</p>
                 <h3>核心研究方法指南</h3>
-                <p>根据研究问题、数据条件与能力边界，在扎根理论、fsQCA、问卷、案例和面板数据方法之间做选择与组合。</p>
+                <p>按问题与数据条件选方法，让证据可被检验。</p>
                 <div class="course-meta">
                   <span>方法选择路径图</span>
                   <span class="course-arrow" aria-hidden="true">→</span>
@@ -192,7 +192,7 @@
               <div class="course-copy">
                 <p class="course-eyebrow">思维 · Thinking</p>
                 <h3>第一性原理思维</h3>
-                <p>从概念辨析和经典案例出发，训练分解、验证与重建，并迁移到农村发展研究和论文论证。</p>
+                <p>从概念分解到研究迁移，训练独立判断。</p>
                 <div class="course-meta">
                   <span>10 张认知锚点</span>
                   <span class="course-arrow" aria-hidden="true">→</span>
@@ -210,7 +210,7 @@
               <div class="course-copy">
                 <p class="course-eyebrow">专题 · Topic</p>
                 <h3>农业信贷的硬科技</h3>
-                <p>把卫星、物联、区块链和数据闭环串成一套可验证的信贷方法，覆盖五道检验到数字画像。</p>
+                <p>把卫星、物联、区块链串成可验证的信贷闭环。</p>
                 <div class="course-meta">
                   <span>6 张认知锚点</span>
                   <span class="course-arrow" aria-hidden="true">→</span>
