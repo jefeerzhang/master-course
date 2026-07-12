@@ -449,7 +449,6 @@ p {
   font-size: clamp(30px, 3.4vw, 44px);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #ffffff;
 }
 .course-card--lead p {
   max-width: 50ch;
@@ -548,12 +547,20 @@ p {
   letter-spacing: -0.01em;
   color: var(--ink);
 }
+/* lead 卡 h3 在通用规则之后,确保覆盖 */
+.course-card--lead h3 { color: #ffffff; }
 .course-card p {
   margin: 0;
   color: var(--text);
   font-size: 13.5px;
   font-weight: 500;
   line-height: 1.7;
+}
+.course-card--lead p {
+  max-width: 50ch;
+  color: #f0f7f2;
+  font-size: 16px;
+  font-weight: 500;
 }
 .course-meta {
   display: flex;
