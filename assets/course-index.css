@@ -267,12 +267,7 @@ p {
   line-height: 1.6;
 }
 
-/* ============== 学习路径 ============== */
-.path-section {
-  padding: clamp(48px, 6vw, 76px) 0 clamp(48px, 6vw, 72px);
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
-}
+/* ============== 课程资料网格 ============== */
 .section-heading { margin-bottom: 36px; }
 .section-eyebrow {
   margin: 0 0 8px;
@@ -300,64 +295,6 @@ p {
   max-width: 56em;
 }
 
-.path-track {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
-}
-.path-track::before {
-  content: "";
-  position: absolute;
-  top: 24px;
-  left: 5%;
-  right: 5%;
-  height: 1px;
-  background: var(--line-strong);
-  z-index: 0;
-}
-.path-step {
-  position: relative;
-  padding: 0 18px;
-  background: transparent;
-  z-index: 1;
-}
-.path-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--line-strong);
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  font-feature-settings: "tnum" 1;
-  margin-bottom: 16px;
-}
-.path-step h3 {
-  margin: 0 0 6px;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-}
-.path-step p {
-  color: var(--text);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.7;
-}
-
-/* ============== 课程资料网格 ============== */
 .course-section {
   padding: clamp(48px, 6vw, 76px) 0 clamp(64px, 8vw, 100px);
   background: var(--paper);
@@ -597,8 +534,6 @@ p {
 /* ============== 响应式 ============== */
 @media (max-width: 960px) {
   .course-hero-inner { grid-template-columns: 1fr; }
-  .path-track { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
-  .path-track::before { display: none; }
   .course-card:not(.course-card--lead) { grid-column: span 6; }
   .course-card--lead .course-link { grid-template-columns: 1fr; min-height: 0; }
   .course-card--lead .course-visual { aspect-ratio: 16 / 9; }
@@ -614,7 +549,6 @@ p {
   .hero-copy h1 { font-size: 56px; }
   .hero-summary { font-size: 16px; }
   .section-heading h2 { font-size: 28px; }
-  .path-track { grid-template-columns: 1fr; gap: 18px; }
   .course-card:not(.course-card--lead) { grid-column: 1 / -1; }
   .course-card:not(.course-card--lead) .course-link {
     grid-template-rows: auto minmax(180px, 50vw);

@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jefeerzhang.github.io/master-course/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23245642'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='serif' font-size='27' font-weight='700' fill='%23f6fbf8'%3EJZ%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/course-index.css?v=6">
+  <link rel="stylesheet" href="assets/course-index.css?v=7">
   <!--
     主页两个核心区是"派生视图"，数据源在 course-focus.json。
     此处把 JSON 嵌入 HTML 是为了让静态部署下浏览器无需额外 HTTP 也能拿到派生数据。
@@ -19,8 +19,9 @@
   -->
   <script id="course-focus-data" type="application/json">
 {
-  "version": "1.0",
+  "version": "1.1",
   "lastUpdated": "2026-07-12",
+  "changeLog": "v1.1: 删除学习路径 section",
   "items": [
     { "id": "01", "title": "研究问题与思维训练",   "desc": "从真问题出发，建立分析与判断的起点。" },
     { "id": "02", "title": "研究方法与证据设计",   "desc": "根据问题选方法，让证据可被检验。" },
@@ -134,41 +135,7 @@
       </div>
     </section>
 
-    <!-- =============== 学习路径 =============== -->
-    <section class="path-section" aria-labelledby="path-title">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-eyebrow">Path · 学习路径</p>
-          <h2 id="path-title">一门课程，三段式路径</h2>
-          <p class="section-lede">从选题到答辩，按四步推进：先定问题，再选方法，再做证据，最后成稿。</p>
-        </div>
-
-        <ol class="path-track" aria-label="学习路径">
-          <li class="path-step">
-            <span class="path-num">01</span>
-            <h3>定问题</h3>
-            <p>从经验事实出发，把模糊感觉收敛为一个可问的、可用证据回答的问题。</p>
-          </li>
-          <li class="path-step">
-            <span class="path-num">02</span>
-            <h3>选方法</h3>
-            <p>按问题类型、数据条件、能力边界选方法，让方法服务于问题。</p>
-          </li>
-          <li class="path-step">
-            <span class="path-num">03</span>
-            <h3>做证据</h3>
-            <p>用一手或二手数据形成证据链，把方法跑通，把材料整理干净。</p>
-          </li>
-          <li class="path-step">
-            <span class="path-num">04</span>
-            <h3>成文稿</h3>
-            <p>用结构承载论点，写作规范不是装饰，而是让审稿人能读完你的论证。</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- =============== 课程资料 =============== -->
+    <!-- =============== 课程资料 ============== -->
     <section class="course-section" aria-labelledby="materials-title">
       <div class="container">
         <div class="section-heading">

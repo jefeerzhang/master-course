@@ -1,8 +1,9 @@
 {
   "$schema": "https://jefeerzhang.github.io/master-course/schemas/course-focus.v1.json",
-  "version": "1.0",
+  "version": "1.1",
   "lastUpdated": "2026-07-12",
   "generatedBy": "手工编辑（待 agent 自动化派生）",
+  "changeLog": "v1.1: 删除学习路径 section, 主页简化至 4 段: HERO + 课程重点 + 课程资料 + footer",
   "sourceHint": "每次推送子站内容后, agent 读取各子站首页的 <h1>/<h2>/<p> + 此 JSON 默认模板, 重新聚合派生本页 'course-focus' 区。详见 MAINTENANCE.md。",
   "items": [
     {
