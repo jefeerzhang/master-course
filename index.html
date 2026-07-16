@@ -249,7 +249,34 @@
   })();
   </script>
 <script>
-(function(){var b=document.getElementById("theme-toggle");if(b&&window.Theme){b.addEventListener("click",function(){window.Theme.toggle();});}})
+(function(){
+  var KEY = "site-theme";
+  var LIGHT = "light";
+  var DARK = "dark";
+  function read() {
+    try {
+      var v = localStorage.getItem(KEY);
+      if (v === DARK || v === LIGHT) return v;
+    } catch (e) {}
+    return LIGHT;
+  }
+  function apply(theme) {
+    var html = document.documentElement;
+    if (theme === DARK) {
+      html.setAttribute("data-theme", "dark");
+    } else {
+      html.removeAttribute("data-theme");
+    }
+  }
+  var btn = document.getElementById("theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", function() {
+      var next = read() === DARK ? LIGHT : DARK;
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+      apply(next);
+    });
+  }
+})();
 </script>
 </body>
 </html>
